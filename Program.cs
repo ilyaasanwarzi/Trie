@@ -57,7 +57,6 @@ namespace TrieTernaryTree
             size = 0;
         }
 
-
         public bool Remove(string key){
             return Remove(ref root, key, 0);
         }
