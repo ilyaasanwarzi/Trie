@@ -27,7 +27,7 @@ namespace TrieTernaryTree
     {
         private Node root;                 // Root node of the Trie
         private int size;                  // Number of values in the Trie
-
+        //start class node
         class Node
         {
             public char ch;                // Character of the key
