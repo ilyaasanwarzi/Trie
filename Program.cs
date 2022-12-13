@@ -50,18 +50,18 @@ namespace TrieTernaryTree
         // Trie
         // Creates an empty Trie
         // Time complexity:  O(1)
-
+        //start a publie trie
         public Trie()
         {
             MakeEmpty();
             size = 0;
         }
 
-
+        //start public bool
         public bool Remove(string key){
             return Remove(ref root, key, 0);
         }
-
+        //start private bool
 
         private bool Remove(ref Node p, string key, int i){
 
@@ -92,7 +92,7 @@ namespace TrieTernaryTree
         // Contains
         // Returns true if the given key is found in the Trie; false otherwise
         // Time complexity:  O(d) where d is the depth of the trie
-
+        //stat public bool with string key
         public bool Contains(string key)
         {
             int i = 0;
@@ -124,7 +124,7 @@ namespace TrieTernaryTree
         // Public Insert
         // Calls the private Insert which carries out the actual insertion
         // Returns true if successful; false otherwise
-
+         //start public bool with string
         public bool Insert(string key, T value)
         {
             return Insert(ref root, key, 0, value);
@@ -136,7 +136,7 @@ namespace TrieTernaryTree
         // Note: Duplicate keys are ignored
         // Time complexity:  O(n+L) where n is the number of nodes and 
         //                                L is the length of the given key
-
+        //start bool with references, strings and values as well as if else statements
         private bool Insert(ref Node p, string key, int i, T value)
         {
             if (p == null)
@@ -173,7 +173,7 @@ namespace TrieTernaryTree
         // Value
         // Returns the value associated with a key; otherwise default
         // Time complexity:  O(d) where d is the depth of the trie
-
+        //start public valie for string
         public T Value(string key)
         {
             int i = 0;
@@ -205,7 +205,7 @@ namespace TrieTernaryTree
         // MakeEmpty
         // Creates an empty Trie
         // Time complexity:  O(1)
-
+        //start public void for time complexity
         public void MakeEmpty()
         {
             root = null;
@@ -214,7 +214,7 @@ namespace TrieTernaryTree
         // Empty
         // Returns true if the Trie is empty; false otherwise
         // Time complexity:  O(1)
-
+        /start public bool
         public bool Empty()
         {
             return root == null;
@@ -223,7 +223,7 @@ namespace TrieTernaryTree
         // Size
         // Returns the number of Trie values
         // Time complexity:  O(1)
-
+        //start public int and return size
         public int Size()
         {
             return size;
@@ -231,7 +231,7 @@ namespace TrieTernaryTree
 
         // Public Print
         // Calls private Print to carry out the actual printing
-
+        //start public void to output key values
         public void Print()
         {
             Print(root, "");
@@ -240,7 +240,7 @@ namespace TrieTernaryTree
         // Private Print
         // Outputs the key/value pairs ordered by keys
         // Time complexity:  O(n) where n is the number of nodes
-
+        //start private void with node and string
         private void Print(Node p, string key)
         {
             if (p != null)
@@ -254,7 +254,7 @@ namespace TrieTernaryTree
             }
         }
     }
-
+    //start a new class program
     class Program
     {
         static void Main(string[] args)
@@ -286,5 +286,6 @@ namespace TrieTernaryTree
             T.Print();
             Console.ReadKey();
         }
+            //console writelines to output whatever should be printed
     }
 }
